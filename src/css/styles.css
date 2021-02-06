@@ -1,0 +1,62 @@
+@import url("//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  background-color: #eee;
+  font-family: Poppins, sans-serif;
+}
+
+.btn {
+    @apply shadow select-none bg-blue-600 text-white font-medium py-3 px-4 rounded-xl mr-4;
+}
+
+.btn:hover {
+  @apply shadow-xl bg-blue-800;
+}
+
+.btn:focus {
+  @apply outline-none ring-2 ring-blue-600 ring-opacity-50;
+}
+
+.overlay {
+  @apply fixed inset-0 w-full h-full bg-black bg-opacity-50 z-10;
+}
+
+.dialog {
+  @apply bg-white w-96 max-w-full rounded-xl mx-auto mt-10;
+}
+
+.dialog__content {
+  @apply py-4 px-3;
+}
+
+.dialog__title {
+  @apply font-medium text-lg text-gray-900 mb-2;
+}
+
+.dialog__description {
+  @apply text-sm text-gray-500 mb-4;
+}
+
+.dialog__footer {
+  @apply flex justify-end py-4;
+}
+
+.dialog__cancel {
+  @apply select-none focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 text-gray-900 font-medium py-3 px-4 rounded-xl mr-4;
+}
+
+.dialog__cancel:hover {
+  @apply text-gray-700;
+}
+
+.dialog__confirm {
+  @apply select-none focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50 bg-red-100 text-red-600  font-medium py-3 px-4 rounded-xl mr-4;
+}
+
+.dialog__confirm:hover {
+  @apply bg-red-300 text-red-800;
+}
